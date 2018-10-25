@@ -1,0 +1,12 @@
+server:
+  port: 8080
+
+mybatis:
+  mapper-locations: classpath*:mapper/*.xml
+
+spring:
+  datasource:
+    username: sd_local
+    password: sd_123
+    url: jdbc:mysql://10.160.2.171:3306/trade?useUnicode=true&characterEncoding=utf-8
+    driver-class-name: com.mysql.jdbc.Driver

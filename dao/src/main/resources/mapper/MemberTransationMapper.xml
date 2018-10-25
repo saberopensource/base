@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shengdun.dao.MemberTransationMapper">
+    <resultMap type="com.shengdun.model.MemberTransaction" id="BaseResultMap">
+        <id column="id" property="id" />
+        <result property="orgId" column="org_id"/>
+    </resultMap>
+    <!-- sql list -->
+    <sql id="Base_Column_List">
+        id as id,org_id as orgId
+    </sql>
+    <!-- 查询 where条件id= -->
+    <select id="getAll" resultType="map">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM member_transaction
+    </select>
+</mapper>
